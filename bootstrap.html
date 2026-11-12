@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pinco Pallo in Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- INSIEME AL DOCENTE: qui va il link al CSS di Bootstrap 5.3 -->
 </head>
 
@@ -15,85 +16,108 @@
 <body>
 
   <!-- PASSO 4 · TOCCA A TE: al posto di questo header, una navbar di Bootstrap con gli stessi link -->
-  <header>
-    <nav>
-      <a href="#">My App</a>
-      <ul>
-        <li><a href="#">Chi siamo</a></li>
-        <li><a href="#">Servizi</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">My App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Chi siamo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servizi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <!-- INSIEME AL DOCENTE: il contenitore della pagina -->
-  <main>
+  <main class="container py-4">
     <!-- PASSO 1 · TOCCA A TE: questo div è la riga, i div subito dentro sono le colonne -->
-    <div>
-      <div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 ">
+      <div class="col">
         <!-- INSIEME AL DOCENTE: la prima card -->
-        <div>
-          <div>
+        <div class="card p-3 h-100">
+          <div class="d-flex align-items-center gap-3">
             <img src="img/pic1.png" alt="Foto profilo" width="55" height="55">
-            <h2>Pinco Pallo</h2>
+            <h2 class="card-title">Pinco Pallo</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ex. Quasi aliquid quidem, magnam, architecto nam laboriosam quos, quaerat temporibus ut.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ex. Quasi aliquid quidem, magnam, architecto
+            nam laboriosam quos, quaerat temporibus ut.</p>
         </div>
       </div>
-      <div>
+      <div class="col">
         <!-- PASSO 2 · TOCCA A TE: da qui in giù le card come la prima, e il badge "Nuovo!" -->
-        <div>
-          <span>Nuovo!</span>
-          <div>
+        <div class="card p-3 h-100">
+          <span
+            class="badge text-bg-danger rounded-pill text-uppercase position-absolute top-0 end-0 translate-middle-y">Nuovo!</span>
+          <div class="d-flex align-items-center gap-3">
             <img src="img/pic2.png" alt="Foto profilo" width="55" height="55">
-            <h2>Pinco Pallo</h2>
+            <h2 class="card-title">Pinco Pallo</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ad saepe minus totam cum! Cumque dolor harum porro voluptatem beatae officia dolores quia, ipsa nemo! Veniam doloremque alias possimus ratione!</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ad saepe minus totam cum! Cumque dolor
+            harum porro voluptatem beatae officia dolores quia, ipsa nemo! Veniam doloremque alias possimus ratione!</p>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
+      <div class="col">
+        <div class="card p-3 h-100">
+          <div class="d-flex align-items-center gap-3">
             <img src="img/pic3.png" alt="Foto profilo" width="55" height="55">
-            <h2>Pinco Pallo</h2>
+            <h2 class="card-title">Pinco Pallo</h2>
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit laboriosam quos, quaerat temporibus ut.</p>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
+      <div class="col">
+        <div class="card p-3 h-100">
+          <div class="d-flex align-items-center gap-3">
             <img src="img/pic4.png" alt="Foto profilo" width="55" height="55">
-            <h2>Pinco Pallo</h2>
+            <h2 class="card-title">Pinco Pallo</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ex. Quasi aliquid quidem, magnam, architecto nam laboriosam quos, quaerat temporibus ut.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ex. Quasi aliquid quidem, magnam, architecto
+            nam laboriosam quos, quaerat temporibus ut.</p>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
+      <div class="col">
+        <div class="card p-3 h-100">
+          <div class="d-flex align-items-center gap-3">
             <img src="img/pic1.png" alt="Foto profilo" width="55" height="55">
-            <h2>Pinco Pallo</h2>
+            <h2 class="card-title">Pinco Pallo</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ex. Quasi aliquid quidem, magnam, architecto nam laboriosam quos, quaerat temporibus ut.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, ex. Quasi aliquid quidem, magnam, architecto
+            nam laboriosam quos, quaerat temporibus ut.</p>
         </div>
       </div>
-      <div>
-        <div>
-          <span>Nuovo!</span>
-          <div>
+      <div class="col">
+        <div class="card p-3 h-100">
+          <span
+            class="badge text-bg-danger rounded-pill text-uppercase position-absolute top-0 end-0 translate-middle-y">Nuovo!</span>
+          <div class="d-flex align-items-center gap-3">
             <img src="img/pic2.png" alt="Foto profilo" width="55" height="55">
-            <h2>Pinco Pallo</h2>
+            <h2 class="card-title">Pinco Pallo</h2>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ad saepe minus totam cum! Cumque dolor harum porro voluptatem beatae officia dolores quia, ipsa nemo! Veniam doloremque alias possimus ratione!</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ad saepe minus totam cum! Cumque dolor
+            harum porro voluptatem beatae officia dolores quia, ipsa nemo! Veniam doloremque alias possimus ratione!</p>
         </div>
       </div>
       <!-- PASSO 3 · TOCCA A TE: il banner. Il div esterno sta nella riga, il colore va su quello interno -->
-      <div>
-        <div>Pubblicità: la tua app, a metà prezzo fino a domenica</div>
+      <div class="w-100 order-first order-lg-last">
+        <div class="bg-warning text-center fw-bold p-3 rounded">Pubblicità: la tua app, a metà prezzo fino a domenica
+        </div>
       </div>
     </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
